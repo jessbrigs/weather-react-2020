@@ -42,13 +42,10 @@ export default function Weather() {
           {" "}
         </span>
         <span className="units">
-          <a href="#" id="celsius-link" className="active">
+          <span id="celsius-link" className="active">
             °C
-          </a>{" "}
-          |
-          <a href="#" id="fahrenheit-link">
-            °F
-          </a>
+          </span>{" "}
+          |<span id="fahrenheit-link">°F</span>
         </span>
         <ul className="weather-description">
           <li id="weather-description"></li>
