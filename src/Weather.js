@@ -34,6 +34,7 @@ export default function Weather() {
       <section className="current-temperature">
         <div className="current-forecast-img">
           <img
+            alt="weather-icon"
             src="http://openweathermap.org/img/wn/10d@2x.png"
             id="weather-icon"
           />
