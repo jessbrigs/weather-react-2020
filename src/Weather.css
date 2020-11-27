@@ -54,6 +54,7 @@
 
 .Weather .current-temp {
   font-size: 25px;
+  display: inline-block;
 }
 
 .city {
