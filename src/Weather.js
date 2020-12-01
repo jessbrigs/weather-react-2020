@@ -68,11 +68,9 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="border">
-          <div className="location">{form}</div>
-          <WeatherInfo data={weatherData} />
-          <WeatherForecast city={weatherData.city} />
-        </div>
+        <div className="location">{form}</div>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {

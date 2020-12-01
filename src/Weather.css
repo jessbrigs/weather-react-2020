@@ -1,6 +1,6 @@
 .Weather {
   font-family: "Roboto", sans-serif;
-  margin-top: 50px;
+  padding: 10px;
   background: linear-gradient(to bottom, #023c19 0%, #023c19 40%, #023c19 0%),
     linear-gradient(
       to top,
@@ -9,7 +9,6 @@
     );
   background-blend-mode: multiply;
   border-radius: 25px;
-  border: none;
   color: #ffffff;
 }
 
@@ -37,12 +36,11 @@
   font-weight: 700;
 }
 
-input.form-control {
-  text-align: center;
-}
-
 input.btn.btn-primary.w-100 {
-  margin-left: -150px;
+  color: #023c19;
+  background-color: #a59405;
+  border: rgba(255, 255, 255, 0.4);
+  margin-left: -185px;
 }
 
 .weatherIndicators ul {
