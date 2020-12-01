@@ -1,69 +1,104 @@
-.form-location {
-  width: 125px;
+.Weather {
+  font-family: "Roboto", sans-serif;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, #023c19 0%, #023c19 40%, #023c19 0%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 100%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
   border-radius: 25px;
-  padding: 10px;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   border: none;
-  color: black;
-  font-size: 14px;
-  font-weight: 300;
-  transition: 0.2ms ease-in-out;
+  color: #ffffff;
 }
 
-.submit-button {
-  position: relative;
-  margin-left: 73px;
-  border-radius: 25px;
-  padding: 10px 15px;
-  background-color: #ffffff;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
-  border: none;
-  color: black;
-  font-size: 14px;
-  font-weight: 300;
-  transition: 0.2ms ease-in-out;
-}
-.current-location-btn {
-  position: relative;
-  margin-left: -50px;
-  width: 135px;
-  border-radius: 25px;
-  padding: 10px 15px;
-  background-color: #ffffff;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
-  border: none;
-  color: black;
-  font-size: 14px;
-  font-weight: 300;
-  transition: 0.2ms ease-in-out;
-}
-
-.Weather li {
+.Weather ul {
   list-style: none;
+}
+.WeatherInfo h1 {
+  display: block;
   text-align: center;
 }
 
-.current-forecast-img {
+.Weather .location {
+  margin-top: 20px;
+}
+
+.Weather h1 {
+  font-weight: 400;
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+.Weather h2 {
   text-align: center;
-  font-size: large;
+  font-size: 50px;
+  font-weight: 700;
 }
 
-.Weather .weather-description {
-  font-size: 35px;
-}
-
-.Weather .current-temp {
-  font-size: 25px;
-  display: inline-block;
-}
-
-.city {
-  font-size: 33px;
+input.form-control {
   text-align: center;
-  font-weight: bold;
 }
 
-.current-date {
-  font-size: 18px;
+input.btn.btn-primary.w-100 {
+  margin-left: -150px;
+}
+
+.weatherIndicators ul {
+  display: block;
+  margin: 0 auto;
+  font-size: 22px;
+  padding: 0;
+}
+
+.Weather .tempLocal {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.Weather .units {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  top: -25px;
+  left: -2px;
+}
+
+.Weather .units a {
+  color: grey;
+  text-decoration: none;
+}
+
+.WeatherTemperature {
   text-align: center;
+}
+
+.Weather img {
+  display: block;
+  margin: 0 auto;
+}
+
+.weatherIndicators {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.Weather button {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.25rem;
+  width: 35px;
+  position: relative;
+  top: 4px;
+}
+
+.Weather button .fas {
+  color: #6d757d;
+  font-size: 26px;
+  position: relative;
+  top: -1px;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
 
 import "./Weather.css";
@@ -27,6 +28,14 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function searchCity(position) {
+    let apiKey = "ed88c898fe3aa0b840199cac2d2d0db1";
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -36,26 +45,34 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  let form = (
+    <form
+      className="form-inline justify-content-center"
+      onSubmit={handleSubmit}
+    >
+      <div className="col-9">
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          className="form-control"
+          autoFocus="on"
+          onChange={handleCityChange}
+        />
+      </div>
+      <div className="col-3">
+        <input type="submit" value="Search" className="btn btn-primary w-100" />
+      </div>
+    </form>
+  );
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-2">
-              <input
-                className="form-location"
-                type="search"
-                placeholder="Enter a city..."
-                autocomplete="off"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-7">
-              <input className="submit-button" type="submit" value="search" />
-            </div>
-          </div>
-        </form>
-        <WeatherInfo data={weatherData} />
+        <div className="border">
+          <div className="location">{form}</div>
+          <WeatherInfo data={weatherData} />
+          <WeatherForecast city={weatherData.city} />
+        </div>
       </div>
     );
   } else {

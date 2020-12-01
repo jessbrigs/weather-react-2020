@@ -1,0 +1,10 @@
+.WeatherForecast {
+  text-align: center;
+  margin: 10px 0;
+  padding-bottom: 50px;
+}
+
+.WeatherForecast img {
+  display: block;
+  width: 50px;
+}

@@ -9,6 +9,7 @@ export default function App() {
         <Weather defaultCity="Toronto" />
 
         <footer>
+          <br />
           This project was coded by Jessica Brigantino and is{" "}
           <a
             href="https://github.com/jessbrigs/weather-react-2020"
