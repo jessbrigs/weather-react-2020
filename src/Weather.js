@@ -28,14 +28,6 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function searchCity(position) {
-    let apiKey = "ed88c898fe3aa0b840199cac2d2d0db1";
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     search();
